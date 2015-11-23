@@ -1,0 +1,58 @@
+/*les images prennent toutes la largeur de l'encadré carousel*/
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+  width: 100%;
+  margin: auto;
+}
+/*couleur des côtés du carousel là oùse trouve les glyphicons*/
+.carousel-inner {
+  background-color: black;
+}
+.container {
+  margin-top: 0;
+}
+header img {
+  width: 120px;
+}
+header h1 {
+  font-size: 600%;
+  -moz-font-family: 'Oswald', sans-serif;
+  -webkit-font-family: 'Oswald', sans-serif;
+}
+/*changement d'écriture dans la nav*/
+.nav navbar-nav navbar-right {
+  font-family: avenir;
+}
+/*enlever le point de la barre de nav en mobile et l'agrandir*/
+.menu
+{ text-align: right;
+  width:35%;
+}
+/*mise en couleur des icônes du slide/carousel*/
+.glyphicon-chevron-right {
+  color: black;
+}
+.glyphicon-chevron-left {
+  color: black;
+}
+/*concerne le petit paragraphe présentant le portfolio*/
+p {
+  text-align: center;
+  font-weight: bold;
+}
+@media screen and (max-width: 600px) {
+  header img {
+    margin-left: 40%;
+  }
+}
+@media screen and (max-width: 768px) {
+  header img {
+    width: 25%;
+    margin-left: 40%;
+  }
+}
+@media screen and (max-width: 320px) {
+  header img {
+    margin-left: 30%;
+    width: 35%;
+  }
+}
