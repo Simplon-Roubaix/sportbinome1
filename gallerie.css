@@ -1,0 +1,103 @@
+body {
+background-color: rgba(206, 206, 206, 0.2);
+/*background-image:radial-gradient(white 80%, black 30%);*/
+}
+/*header*/
+header img {
+  width: 120px;
+}
+
+header h1 {
+  font-size: 600%;
+  -moz-font-family: 'Playfair Display', serif;
+  -webkit-font-family: 'Playfair Display', serif;
+}
+
+/*container*/
+/*zone BOUTON --> concerne les boutons noir sous le titre*/
+#bouton{
+  background-image: linear-gradient(white, black);
+  color:white;
+}
+/*concerne le bouton "précédent"*/
+.boutn{
+  margin-left: 20%;
+}
+/*chnagement de l'écriture et de la taille*/
+#scrpt{
+  font-size:75%;
+  font-family: 'Playfair Display', serif;
+}
+
+/*début du contenu --> concerne la galerie de photos*/
+/*images en ligne et qui prend toute les largeurs et hauteur */
+ul li {
+  position: relative;
+  display: inline-block;
+  margin:0 auto;
+  margin-left: 15%;
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  list-style: none;
+}
+
+/*temps, position et ajustement des images dans l'encadrement du bloc*/
+ul li a {
+  display: block;
+  overflow: hidden;
+  width: 100px;
+  height: 100px;
+  margin-top: 0px;
+  margin-left: 0px;
+  border: 0px solid rgba(0, 0, 0, 0.7);
+  transition-property: width, height, margin, z-index, border;
+  transition-duration: 0.4s;
+}
+
+/*lorsque l'on passe la souris sur les images elles apparaissent avec une bordure autour*/
+ul li a:hover {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  margin-top: -56px;
+  margin-left: -56px;
+  z-index: 100;
+  border: 6px solid rgba(0, 0, 0, 0.7);
+}
+ul li a img {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  z-index: 20;
+  transition-property: width, height, z-index;
+  transition-duration: 0.4s;
+}
+ul li a:hover img {
+  width: 200px;
+  height: 200px;
+  z-index: 100;
+}
+
+/*concerne les medias queries*/
+/*agrandir le logo pour la version mobile*/
+@media screen and (max-width: 320px) {
+  header img {
+    width: 40%;
+  }
+}
+/*rendre plus visible le logo*/
+@media screen and (max-width: 600px) {
+  header img {
+    width: 30%;
+  }
+}
+/*agrandissement de la police et du logo pour les 768px*/
+@media screen and (max-width: 768px) {
+  header h1 {
+    font-size: 8em;
+  }
+  header img {
+    width: 30%;
+  }
+}

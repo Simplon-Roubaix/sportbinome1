@@ -1,0 +1,58 @@
+body {
+  /*background: linear-gradient(to left, grey, rgba(0, 255, 0, 0))  rend le fond d'écran d'un dégradé gris-blanc*/
+  background-color: rgba(206, 206, 206, 0.5);
+  ;
+}
+
+/*bordure des cellules*/
+#name1, #email1, #mess1 {
+  border: 1px solid black;
+}
+
+/*agrandissement du logo*/
+header img {
+  width: 120px;
+}
+
+/*agrandissement du logo et changement de la typo*/
+header h1 {
+  font-size: 600%;
+  -moz-font-family: 'Oswald', sans-serif;
+  -webkit-font-family: 'Oswald', sans-serif;
+}
+h2 {
+  font-family: avenir;
+  font-size: 3em;
+}
+
+/*l'avatar Hot situé près des champs*/
+#avatar {
+  margin-top: 10%;
+}
+
+/*permet d'aligner le titre et le décaler par la gauche uniquement pour les 600px*/
+@media screen and (max-width: 600px) {
+  header img {
+    margin-left: 40%;
+  }
+}
+
+/*choix de vouloir aligner le logo et le h1 et de le laisser apparaître pr les 768px*/
+@media screen and (max-width: 768px) {
+  header h1 {
+    text-align: center;
+    display: inline-block;
+  }
+  header img {
+    width: 25%;
+    display: inline-block;
+  }
+}
+
+/*le logo continue d'apparaître mais au centre avec une taille plus grande pour la version mobile*/
+@media screen and (max-width: 320px) {
+  header img {
+    margin-left: 30%;
+    width: 35%;
+  }
+}
